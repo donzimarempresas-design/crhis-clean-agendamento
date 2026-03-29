@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>CRHIS CLEAN - Agendamento | Limpeza Automotiva & Estofados</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones (gratuito) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <i class="fas fa-spray-can-sparkles logo-icon"></i>
+                <h1>CRHIS <span>CLEAN</span></h1>
+                <p class="slogan">CONFORTO E BEM-ESTAR</p>
+            </div>
+            <p class="subtitle">Agende seu serviço e receba atendimento prioritário no WhatsApp</p>
+        </div>
+
+        <form id="appointmentForm" class="appointment-form">
+            <!-- Nome do Cliente -->
+            <div class="form-group">
+                <label for="nome"><i class="fas fa-user"></i> Nome Completo *</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </div>
+
+            <!-- Telefone -->
+            <div class="form-group">
+                <label for="telefone"><i class="fab fa-whatsapp"></i> WhatsApp *</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="923 725 236">
+                <small>Enviaremos a confirmação para este número</small>
+            </div>
+
+            <!-- Tipo de Serviço -->
+            <div class="form-group">
+                <label for="servico"><i class="fas fa-brush"></i> Tipo de Serviço *</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione um serviço</option>
+                    <option value="Lavagem Completa de Interior">🚗 Lavagem Completa de Interior</option>
+                    <option value="Limpeza de Sofá">🛋️ Limpeza de Sofá</option>
+                    <option value="Limpeza de Cortina">🪟 Limpeza de Cortina</option>
+                    <option value="Polimento Automotivo">✨ Polimento Automotivo</option>
+                    <option value="Pacote Premium">⭐ Pacote Premium (Carro + Estofados)</option>
+                </select>
+            </div>
+
+            <!-- Data e Horário -->
+            <div class="row-2cols">
+                <div class="form-group">
+                    <label for="data"><i class="fas fa-calendar-alt"></i> Data *</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario"><i class="fas fa-clock"></i> Horário *</label>
+                    <select id="horario" name="horario" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="08:00">08:00 - 09:00</option>
+                        <option value="09:00">09:00 - 10:00</option>
+                        <option value="10:00">10:00 - 11:00</option>
+                        <option value="11:00">11:00 - 12:00</option>
+                        <option value="13:00">13:00 - 14:00</option>
+                        <option value="14:00">14:00 - 15:00</option>
+                        <option value="15:00">15:00 - 16:00</option>
+                        <option value="16:00">16:00 - 17:00</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Endereço -->
+            <div class="form-group">
+                <label for="endereco"><i class="fas fa-map-marker-alt"></i> Endereço para Atendimento *</label>
+                <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro, cidade - Luanda, Angola">
+            </div>
+
+            <div class="form-group">
+                <label for="veiculo"><i class="fas fa-car"></i> Modelo do Veículo (se aplicável)</label>
+                <input type="text" id="veiculo" name="veiculo" placeholder="Ex: Toyota Corolla, Hyundai HB20">
+            </div>
+
+            <!-- Observações -->
+            <div class="form-group">
+                <label for="obs"><i class="fas fa-pen"></i> Observações / Detalhes adicionais</label>
+                <textarea id="obs" name="obs" rows="3" placeholder="Manchas específicas, material do sofá, cortina, algum detalhe importante..."></textarea>
+            </div>
+
+            <!-- Botão de Envio -->
+            <button type="submit" class="btn-submit">
+                <i class="fab fa-whatsapp"></i> Agendar via WhatsApp
+            </button>
+        </form>
+
+        <div class="footer">
+            <p><i class="fas fa-check-circle"></i> Você receberá nossa confirmação em até 15 minutos</p>
+            <p><i class="fas fa-shield-alt"></i> CRHIS CLEAN - Conforto e Bem-Estar para seu lar e seu veículo</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
