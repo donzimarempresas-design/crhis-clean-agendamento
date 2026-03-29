@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4B0082 0%, #6A0DAD 50%, #8B00FF 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    overflow: hidden;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    background: linear-gradient(135deg, #3A0066 0%, #6A0DAD 100%);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.header h1 span {
+    color: #FFD700;
+    font-weight: 800;
+}
+
+.slogan {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    padding-top: 8px;
+    margin-top: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.appointment-form {
+    padding: 35px;
+    background: white;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #3A0066;
+    font-size: 14px;
+}
+
+.form-group label i {
+    color: #6A0DAD;
+    width: 25px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8e0f0;
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background: #fefcfd;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 4px rgba(106, 13, 173, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: #999;
+}
+
+.row-2cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.footer {
+    background: linear-gradient(135deg, #f8f3ff 0%, #f0e8fa 100%);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #6A0DAD20;
+}
+
+.footer p {
+    color: #4B0082;
+    font-size: 12px;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.footer i {
+    color: #6A0DAD;
+    margin-right: 6px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .container {
+        border-radius: 20px;
+    }
+    
+    .appointment-form {
+        padding: 22px;
+    }
+    
+    .row-2cols {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .header h1 {
+        font-size: 28px;
+    }
+    
+    .btn-submit {
+        font-size: 16px;
+        padding: 14px;
+    }
+    
+    .logo-icon {
+        font-size: 45px;
+    }
+}
+
+/* Estilo para o campo de data */
+input[type="date"] {
+    color: #333;
+}
+
+/* Placeholder personalizado */
+::placeholder {
+    color: #bbb;
+    font-weight: 300;
+}
